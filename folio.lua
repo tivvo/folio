@@ -31,7 +31,7 @@ local pos = 1
 local folioRegistars = {}
 --#endregion Folio Value Internal
 
-local folioRenderPart = models.model:newPart("folioRenderPart", "GUI")
+local folioRenderPart = models:newPart("folioRenderPart", "GUI")
 folioRenderPart:light(15,15)
 currentMenu.Title = folioRenderPart:newText("folio.Title"):setText("Actions"):setPos(-10,4,0):setScale(1,1,1):setVisible(false):outlineColor(vec(26/255,37/255,58/255)):outline(true)
 local blankTex = textures["1x1white"] or textures:newTexture("1x1white",1,1):setPixel(0,0,vec(1,1,1))
