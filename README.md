@@ -12,7 +12,7 @@ Built in docs are avaliable, but you may use the wiki (_if it's created_) for an
 To get started, all you need to do is the following in your script:
 ```lua
 local folio = require("folio")
--- We're gonna first change our title of our menu, as it defaults to acitons
+-- We're gonna first change our title of our menu, as it defaults to actions.
 folio.setTitle("Menu")
 -- Just adding a simple action, called test, we'll also attach this function to it so it does something specific when we run it.
 local test = folio.newAction("Test", function() print("Tested!") end)
