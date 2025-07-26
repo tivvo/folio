@@ -20,6 +20,7 @@ test:setSymbol(":star:")
 
 ---
 An example avatar is avaliable in the repository for those who need extra help outside of the above example.
-
+Below is a gif example of how the aciton wheel replacement works.
+![tiv@27-07-2025- javaw #Squid](https://github.com/user-attachments/assets/b62e8a94-263d-4cc6-ba87-fa3b59c663d5)
 ---
 **folio Is under the FSL (Figura-Standard-License) license, which can be [viewed in the repository](https://github.com/tivvo/folio/blob/main/LICENSE.md).**
