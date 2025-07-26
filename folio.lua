@@ -458,11 +458,6 @@ if host:isHost() then
             elseif (not inWheel) and (forceClosed == false) then
                 inWheel = true
                 local folioObjects = getFolioObjects()
-                --[[for _, render in pairs(folioObjects) do
-                    if not (render:getName():find("SubAction") or render:getName():find("SubToggle") or render:getName():find("Symbol")) then
-                        render:setVisible(true)
-                    end
-                end]]
                 currentMenu.Title:setVisible(true)
                 currentMenu.Cursor:setVisible(true)
                 for _, render in pairs(currentMenu.Actions) do
