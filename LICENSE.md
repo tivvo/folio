@@ -19,5 +19,6 @@ Redistribution Guidelines:
 
 ---
 DEFINITION:
-"Commission" refers to a mutual agreement between two parties involving the
+"Commission" refers to a mutual agreement between two parties involving the exchange of value (monetary or otherwise)
+for services or deliverables.
 ```
