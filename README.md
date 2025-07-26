@@ -22,5 +22,7 @@ test:setSymbol(":star:")
 ```
 
 _An example avatar is included in this GitHub page for more guidance._
+
 ---
 **folio Is under the FSL (Figura-Standard-License) license, which can be [viewed in the repository](https://github.com/tivvo/folio/blob/main/LICENSE.md).**
+<br></br><sup>fyi, there is compatibility with GNTweenLib/Tween for smoother (kinda) tweens then the regular one</sup>
