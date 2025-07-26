@@ -4,6 +4,9 @@ _A lightweight, replacement action wheel._
 ---
 Folio is a replacement for the current action wheel to introduce a menu which can be accessed the same way through the same key, and is mainly meant for those who want a simpler experience over the regular action wheel. I've tried to keep parity as much as possible with the original action wheel, with toggles like the original menu being a avaliable action, but also a drop down category version of the regular scroll menu for outfits as an example.
 
+![tiv@27-07-2025- javaw #Squid](https://github.com/user-attachments/assets/b62e8a94-263d-4cc6-ba87-fa3b59c663d5)
+
+
 Built in docs are avaliable, but you may use the wiki (_if it's created_) for any other information.
 
 To get started, all you need to do is the following in your script:
@@ -18,9 +21,6 @@ test:setSymbol(":star:")
 -- And thats it! ✨
 ```
 
----
-An example avatar is avaliable in the repository for those who need extra help outside of the above example.
-Below is a gif example of how the aciton wheel replacement works.
-![tiv@27-07-2025- javaw #Squid](https://github.com/user-attachments/assets/b62e8a94-263d-4cc6-ba87-fa3b59c663d5)
+_An example avatar is included in this GitHub page for more guidance._
 ---
 **folio Is under the FSL (Figura-Standard-License) license, which can be [viewed in the repository](https://github.com/tivvo/folio/blob/main/LICENSE.md).**
