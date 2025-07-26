@@ -22,4 +22,4 @@ test:setSymbol(":star:")
 An example avatar is avaliable in the repository for those who need extra help outside of the above example.
 
 ---
-**folio Is under the FSL (Figura-Standard-License) license, which can be [viewed in the repository](https://github.com/tivvo/folio/LICENSE.md).**
+**folio Is under the FSL (Figura-Standard-License) license, which can be [viewed in the repository](https://github.com/tivvo/folio/blob/main/LICENSE.md).**
