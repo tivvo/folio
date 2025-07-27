@@ -1,5 +1,5 @@
 ```
-FSL / Figura Standard License
+FSL / Figura Standard License (REVISION 1)
 
 This software is provided "as-is", without any express or implied warranty.
 In no event shall the authors be held liable for any damages arising from the use of this software.
