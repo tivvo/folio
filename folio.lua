@@ -111,6 +111,7 @@ end
 ---@param symbol string|Texture The symbol that will be used for the task, this can be an emoji or texture, but it will appear right before the task.
 function ActionTask:setSymbol (symbol)
     addSymbol(symbol, self)
+    return self
 end
 
 ---A new task that can be considered a toggle, just like aciton pages.
@@ -150,7 +151,7 @@ end
 --Sets the symbol for the task.
 ---@param symbol string|Texture The symbol that will be used for the task, this can be an emoji or texture, but it will appear right before the task.
 function ToggleTask:setSymbol (symbol)
-    addSymbol(symbol, self)
+    return addSymbol(symbol, self)
 end
 
 ---A new task that can be considered a category, when selected it'll expand it's child tasks to be visible.
@@ -184,7 +185,7 @@ end
 --Sets the symbol for the action task.
 ---@param symbol string|Texture The symbol that will be used for the task, this can be an emoji or texture, but it will appear right before the task.
 function CategoryTask:setSymbol (symbol)
-    addSymbol(symbol, self)
+    return addSymbol(symbol, self)
 end
 
 ---@param name string The name of the task, this will also be used as the label.
@@ -322,8 +323,8 @@ local function cursorMove (position, noTween)
                 currentMenu.Cursor:setPos(lerped)
                 -- it just works ok :(
                 if (math.round(new.y) == target.y) then
-                    tickEvent:clear()
-                    renderEvent:clear()
+                    events.render:remove("folioTweenRender")
+                    events.tick:remove("folioTickRender")
                 end
             end, "folioTweenRender")
         else
@@ -455,7 +456,7 @@ end
 
 if host:isHost() then
     events.KEY_PRESS:register(function (key,status)
-        if (key == keybinds:fromVanilla("figura.config.action_wheel_button"):getID() and not host:isChatOpen()) then
+        if (key == keybinds:fromVanilla("figura.config.action_wheel_button"):getID() and not host:isChatOpen() and (#currentMenu.Actions>1)) then
             if (status == 0) then
                 pos=1
                 removeRegistarEvents()
