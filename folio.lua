@@ -311,15 +311,20 @@ local function cursorMove (position, noTween)
             local actionPos = curAction:getPos() + vec(4,0,0)
             local time = 0.65
             local old, new, target = currentMenu.Cursor:getPos(), currentMenu.Cursor:getPos(), actionPos
-            function events.tick()
+            local tickEvent, renderEvent
+            tickEvent = events.TICK:register(function ()
                 old = new
                 new = math.lerp(old, target, quadInOut(time))
-            end
+            end, "folioTickRender")
 
-            function events.render(delta)
+            renderEvent = events.RENDER:register(function (delta, context)
                 local lerped = math.lerp(old, new, delta)
                 currentMenu.Cursor:setPos(lerped)
-            end
+                if (lerped == target) then
+                    tickEvent:clear()
+                    renderEvent:clear()
+                end
+            end, "folioTweenRender")
         else
             --- TWEEN-LIB | because i used it so yeah
             tweenLib.new(
@@ -458,6 +463,11 @@ if host:isHost() then
             elseif (not inWheel) and (forceClosed == false) then
                 inWheel = true
                 local folioObjects = getFolioObjects()
+                --[[for _, render in pairs(folioObjects) do
+                    if not (render:getName():find("SubAction") or render:getName():find("SubToggle") or render:getName():find("Symbol")) then
+                        render:setVisible(true)
+                    end
+                end]]
                 currentMenu.Title:setVisible(true)
                 currentMenu.Cursor:setVisible(true)
                 for _, render in pairs(currentMenu.Actions) do
